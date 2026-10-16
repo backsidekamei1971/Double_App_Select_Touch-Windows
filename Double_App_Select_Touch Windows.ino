@@ -37,7 +37,7 @@ void setup()
 
     Waveshield.setRotation(1);
     Waveshield.setTextSize(2);
-    Waveshield.print("Let's Draw!");
+    //Waveshield.print("Let's Draw!");
 
     Waveshield.setRotation(0);
 
@@ -70,35 +70,21 @@ void loop()
 
 
     //  Now that we have a point in screen co-ordinates, draw something there.
-    Waveshield.fillCircle(p.x, p.y, 3, BLUE);
-
-    Waveshield.setRotation(1);
-    Waveshield.setCursor(5,25);
-    Waveshield.setTextColor(WHITE);
-    Waveshield.print("x=");
-    Waveshield.print(p.x);
-    Waveshield.print("  y=");
-    Waveshield.print(p.y);
-delay(100);
-    Waveshield.setCursor(5,25);
-    Waveshield.setTextColor(BLACK);
-    Waveshield.print("x=");
-    Waveshield.print(p.x);
-    Waveshield.print("  y=");
-    Waveshield.print(p.y);
+    //Waveshield.fillCircle(p.x, p.y, 3, BLUE);
 
     Waveshield.setRotation(0);
 
-    if (p.x <= 80 && p.y <= 80 && p.x > 0 ) {
+    if (p.x <= 80 && p.y <= 80 && p.x > 0 ) { //Clear button
       j=1;
       j=2;
     Waveshield.fillScreen(BLACK);
+    app_select=0;
 
     Waveshield.setRotation(1);
     Waveshield.setTextSize(2);
     Waveshield.setCursor(5,5);
     Waveshield.setTextColor(WHITE);
-    Waveshield.print("Let's Draw!");
+    //Waveshield.print("Let's Draw!");
 
     Waveshield.setRotation(0);
     Waveshield.fillRect(0, 0, 80, 80, YELLOW); 
@@ -187,7 +173,7 @@ delay(100);
     Waveshield.setTextColor(BLACK);
     Waveshield.print("Cancel");
     }
-    if (app_select=1){
+    if (app_select==1){
     if (p.x <= 295 && p.y <= 300 && p.x > 235 && p.y >= 200){  ///Si Wonderful Select menu gamen
         
         Waveshield.setRotation(1);
@@ -214,7 +200,7 @@ delay(100);
 
     }
     }
-    if (app_select=1){
+    if (app_select==1){
       if (p.x <= 295 && p.y <= 450 && p.x > 235 && p.y >= 350){  ///Si Wonderful Select menu gamen
      Waveshield.setRotation(1);
 
@@ -278,19 +264,215 @@ delay(100);
     Waveshield.fillCircle(190, 230, 9, WHITE);
 
     }
-  if (p.x <= 320 && p.y <= 80 && p.x > 240 && p.y >= 0 ){
+  if (p.x <= 320 && p.y <= 80 && p.x > 240 && p.y >= 0 ){  //touch calculator gamen
    j=1;
    j=2;
-    
+
+    app_select=5;
+
+
     Waveshield.fillScreen(BLACK);
-app_select=0;
-    Waveshield.fillRect(0, 80, 80, 80, MAGENTA);
-    Waveshield.fillRect(0, 160, 80, 80, GREEN);
+
+            Waveshield.setRotation(0);
+    Waveshield.fillRect(0, 0, 80, 80, YELLOW); 
+
+    Waveshield.setRotation(0);
+    Waveshield.setCursor(5,5);
+    Waveshield.setTextSize(2);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("CLEAR");
+    //Waveshield.fillRect(0, 80, 80, 80, MAGENTA);
+    //Waveshield.fillRect(0, 160, 80, 80, GREEN);
     Waveshield.fillRect(80, 0, 80, 80, WHITE);
     Waveshield.fillRect(160, 0, 80, 80, BLUE);
     Waveshield.fillRect(240, 0, 80, 80, CYAN);
-    Waveshield.fillRect(0, 0, 80, 80, YELLOW);
 
+    Waveshield.drawRect(0,150,60,240, MAGENTA);
+
+    Waveshield.fillRect(80,160,60,60, WHITE);
+    Waveshield.setCursor(280,90);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("3");
+    Waveshield.setRotation(0);
+
+    Waveshield.fillRect(80,240,60,60, WHITE);
+    Waveshield.setCursor(200,90);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("2");
+    Waveshield.setRotation(0);
+
+    Waveshield.fillRect(80,320,60,60, WHITE);
+    Waveshield.setCursor(120,90);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("1");
+    Waveshield.setRotation(0);
+
+    Waveshield.fillRect(160,160,60,60, WHITE);
+    Waveshield.setCursor(280,170);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("6");
+    Waveshield.setRotation(0);
+
+    Waveshield.fillRect(160,240,60,60, WHITE);
+    Waveshield.setCursor(200,170);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("5");
+    Waveshield.setRotation(0);
+
+    Waveshield.fillRect(160,320,60,60, WHITE);
+    Waveshield.setCursor(120,170);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("4");
+    Waveshield.setRotation(0);
+
+    Waveshield.fillRect(240,160,60,60, WHITE);
+    Waveshield.setCursor(280,250);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("9");
+    Waveshield.setRotation(0);
+
+
+    Waveshield.fillRect(240,240,60,60, WHITE);
+    Waveshield.setCursor(200,250);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("8");
+    Waveshield.setRotation(0);
+
+    Waveshield.fillRect(240,320,60,60, WHITE);
+    Waveshield.setCursor(120,250);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setTextColor(BLACK);
+    Waveshield.print("7");
   }
+   
+   if (app_select==5){
+    if (p.x <= 140 && p.y <= 400 && p.x > 80 && p.y > 340) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("1");
+   }
+
+   if (p.x <= 140 && p.y <= 320 && p.x > 80 && p.y > 260) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("2");
+   }
+
+    if (p.x <= 140 && p.y <= 220 && p.x > 80 && p.y > 160) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("3");
+   }
+
+    if (p.x <= 240 && p.y <= 380 && p.x > 180 && p.y > 320) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("4");
+   }
+
+    if (p.x <= 240 && p.y <= 300 && p.x > 180 && p.y > 240) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("5");
+   }
+
+    if (p.x <= 240 && p.y <= 220 && p.x > 180 && p.y > 160) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("6");
+   }
+
+    if (p.x <= 320 && p.y <= 360 && p.x > 260 && p.y > 300) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("7");
+   }
+
+    if (p.x <= 320 && p.y <= 300 && p.x > 260 && p.y > 240) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("8");
+   }
+
+    if (p.x <= 320 && p.y <= 220 && p.x > 260 && p.y > 160) {    //80,320,60,60
+    //Waveshield.fillScreen(BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.fillRect(0,150,60,240, BLACK);
+    Waveshield.drawRect(0,150,60,250, MAGENTA);
+    Waveshield.setRotation(1);
+    Waveshield.setTextSize(5);
+    Waveshield.setCursor(200,8);
+    Waveshield.setTextColor(WHITE);
+    Waveshield.print("9");
+    }
+   
+   
+  }
+  
 
     }
